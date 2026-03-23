@@ -1,0 +1,1 @@
+export const HIVEN_ADDRESS = "0x74f00FE7f08B2623dC6f67EEd05dA9A090a9E139" as const

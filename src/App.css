@@ -205,8 +205,10 @@ footer {
   height: 6px;
   border-radius: 50%;
   background: var(--accent);
-  margin-bottom: 10px;
+  margin: 0 0 10px 0;
   opacity: 0.7;
+  flex-shrink: 0;
+  align-self: flex-start;
 }
 
 .card-label {
@@ -548,4 +550,5 @@ footer {
   background: var(--accent);
   opacity: 0.4;
   margin: 0 auto 16px;
+  display: block;
 }

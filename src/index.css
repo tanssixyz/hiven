@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
-/* ── design tokens ── */
+/* ── design tokens — always dark ── */
 :root {
-  --text: #6b6375;
+  --text: #9ca3af;
   --text-h: #f3f4f6;
   --bg: #0e0e11;
   --bg-surface: #16171d;
@@ -31,26 +31,6 @@
   -webkit-font-smoothing: antialiased;
 }
 
-/* light mode — secondary, available if wanted later */
-@media (prefers-color-scheme: light) {
-  :root {
-    --text: #6b6375;
-    --text-h: #08060d;
-    --bg: #fafafa;
-    --bg-surface: #ffffff;
-    --bg-raised: #f4f3f8;
-    --border: #e5e4e7;
-    --border-soft: #eeecf0;
-    --code-bg: #f4f3ec;
-    --accent: #7c3aed;
-    --accent-soft: #6d28d9;
-    --accent-bg: rgba(124, 58, 237, 0.06);
-    --accent-border: rgba(124, 58, 237, 0.25);
-    --accent-glow: rgba(124, 58, 237, 0.1);
-    color-scheme: light;
-  }
-}
-
 /* ── reset ── */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -59,6 +39,7 @@
 body {
   margin: 0;
   background: var(--bg);
+  color: var(--text);
 }
 
 p {

@@ -1,17 +1,17 @@
-import { createConfig, http } from "wagmi"
+import { getDefaultConfig } from "@rainbow-me/rainbowkit"
 import { base, mainnet } from "viem/chains"
-import { injected, walletConnect } from "wagmi/connectors"
+import { http } from "wagmi"
 
-const projectId = "6ba1bf292b158f48a08b2056365fcd65"
-
-export const config = createConfig({
+export const config = getDefaultConfig({
+  appName: "Hiven",
+  appDescription: "The smallest possible on-chain gesture",
+  appUrl: "https://hiven.space",
+  appIcon: "https://hiven.space/favicon.svg",
+  projectId: "6ba1bf292b158f48a08b2056365fcd65",
   chains: [base, mainnet],
-  connectors: [
-    injected(),
-    walletConnect({ projectId }),
-  ],
   transports: {
     [base.id]: http("https://mainnet.base.org"),
     [mainnet.id]: http(import.meta.env.VITE_MAINNET_RPC ?? "https://cloudflare-eth.com"),
   },
+  ssr: false,
 })
